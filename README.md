@@ -66,3 +66,7 @@ Para utilizar o react foi utilizado o comando seguinte para a criação da depen
 Para a instalação das bibliotecas utilize os comandos a seguir.
 
 - npm install react-router-dom.
+
+### Apresentação Canva:
+
+https://www.canva.com/design/DAHAROtqOkg/opq4H-9spjdsv001Oo6-RQ/view?utm_content=DAHAROtqOkg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h929a1a1a98
