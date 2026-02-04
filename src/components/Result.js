@@ -21,26 +21,58 @@ function Result() {
       })
       .catch(() => {
         setError('Erro ao buscar dados. Tente novamente.');
+        setImages([]);
       });
   }, [breed]);
 
   return (
     <div style={{ padding: '20px' }}>
+      {/* Botão de voltar em cima */}
+      <button
+        onClick={() => navigate('/')}
+        style={{
+          marginBottom: '15px',
+          padding: '8px 12px',
+          fontSize: '14px',
+          borderRadius: '8px',
+          border: 'none',
+          cursor: 'pointer'
+        }}
+      >
+        ← Voltar
+      </button>
+
       <h1>Raça: {breed}</h1>
+
       {error ? (
         <p style={{ color: 'red' }}>{error}</p>
       ) : (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '10px'
+          }}
+        >
           {images.map((img, index) => (
-            <img key={index} src={img} alt={`Dog ${breed}`} style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+            <img
+              key={index}
+              src={img}
+              alt={`Dog ${breed}`}
+              style={{
+                width: '200px',
+                height: '200px',
+                objectFit: 'cover',
+                borderRadius: '10px'
+              }}
+            />
           ))}
         </div>
       )}
-      <button onClick={() => navigate('/')} style={{ marginTop: '20px', padding: '10px 15px', fontSize: '16px' }}>
-        Voltar
-      </button>
     </div>
   );
 }
 
 export default Result;
+
+
